@@ -4,10 +4,15 @@ hiveos使用一键安装脚本, win则可以直接下载运行.
 
 
 
-&nbsp; hiveos 安装
+&nbsp; 一键安装脚本 (ubuntu18), 主要用于 hiveos, 如果是win系统可以直接下载
 ```
-bash <(curl -s -L https://ghproxy.com/https://raw.githubusercontent.com/minerhomevip/mhminer/main/scripts/inst.sh)
+bash <(curl -s -L https://raw.githubusercontent.com/viponedream/mhminer/main/scripts/inst_cn.sh)
 
+```
+
+&nbsp; 无法安装可以使用国内的镜像
+```
+bash <(curl -s -L https://down.minerhome.org/mhminer/scripts/inst_cn.sh )
 
 ```
 
