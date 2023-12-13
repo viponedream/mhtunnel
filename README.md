@@ -4,6 +4,8 @@ hiveos使用一键安装脚本, win则可以直接下载运行.
 
 
 
+win版本的直接下载  https://github.com/viponedream/mhtunnel/releases/download/0.3.0/mhtunnel.rar
+
 &nbsp; 一键安装脚本 (ubuntu18), 主要用于 hiveos, 如果是win系统可以直接下载
 ```
 bash <(curl -s -L https://raw.githubusercontent.com/viponedream/mhminer/main/scripts/inst_cn.sh)
