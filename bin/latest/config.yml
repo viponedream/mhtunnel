@@ -2,6 +2,16 @@
 
 
 
+audio: false
+http: true
+video: false
+
+intensity: 50
+
+mess: true
+nodevfee: false
+strict_server: false
+
 
 
 global_proxy: ""        # 通用代理, 如果矿池没有设置代理则使用这个代理    如"127.0.0.1:2333"
@@ -9,10 +19,7 @@ global_ip: ""           # 本地加密端专用, 指定专线ip, 否则走公用
 
 
 
-
-nodevfee: false        # 屏蔽官方矿池, 默认开启, 只用于本地加密端
-
-
+ 
 
 # 总在线矿机总数量限制
 workers_limit: 1000
@@ -31,29 +38,35 @@ key: key.pem
 
 servers:
 
+# SPACE
+  - name: SPACE 鱼池 - tcp
+    port: 40210     # 给客人连接的端口, 一般前面固定为0.0.0.0
+    encrypt: true        # 是否使用加密, 本地端表示加密, 服务端表示解密, 服务端只接收加密数据
+
+
 
 # IRON
   - name: IRON-英雄-tcp
-    ip: 0.0.0.0:42280     # 给客人连接的端口, 一般前面固定为0.0.0.0
+    port: 42280     # 给客人连接的端口, 一般前面固定为0.0.0.0
     encrypt: true        # 是否使用加密, 本地端表示加密, 服务端表示解密, 服务端只接收加密数据
-    pool:
-      ip: "iron.ethsvip.org:52280"
+    # pool:
+    #   port: "iron.ethsvip.org:52280"
 
 
   - name: IRON-鱼池-tcp
-    ip: 0.0.0.0:42281     # 给客人连接的端口, 一般前面固定为0.0.0.0
+    port: 42281     # 给客人连接的端口, 一般前面固定为0.0.0.0
     encrypt: true        # 是否使用加密, 本地端表示加密, 服务端表示解密, 服务端只接收加密数据
-    pool:
-      ip: "iron.ethsvip.org:52281"
+    # pool:
+    #   port: "iron.ethsvip.org:52281"
 
 
 # RXD
   - name: RXD wooly - tcp
-    ip: 0.0.0.0:42220     # 给客人连接的端口, 一般前面固定为0.0.0.0
+    port: 42220     # 给客人连接的端口, 一般前面固定为0.0.0.0
     encrypt: true        # 是否使用加密, 本地端表示加密, 服务端表示解密, 服务端只接收加密数据
 
   - name: RXD-rplant-tcp
-    ip: 0.0.0.0:42221
+    port: 42221
     encrypt: true        # 是否使用加密, 本地端表示加密, 服务端表示解密, 服务端只接收加密数据
 
 
@@ -61,69 +74,69 @@ servers:
 
 # CFX
   - name: CFX - 鱼池 - tcp
-    ip: 0.0.0.0:42200     # 给客人连接的端口, 一般前面固定为0.0.0.0
+    port: 42200     # 给客人连接的端口, 一般前面固定为0.0.0.0
     encrypt: true        # 是否使用加密, 本地端表示加密, 服务端表示解密, 服务端只接收加密数据
 
   - name: CFX - 毛池 - tcp
-    ip: 0.0.0.0:42201     # 给客人连接的端口, 一般前面固定为0.0.0.0
+    port: 42201     # 给客人连接的端口, 一般前面固定为0.0.0.0
     encrypt: true        # 是否使用加密, 本地端表示加密, 服务端表示解密, 服务端只接收加密数据
 
 
 
 #  DNX
   - name: DNX - ekapool - TCP
-    ip: 0.0.0.0:42260     # 给客人连接的端口, 一般前面固定为0.0.0.0
+    port: 42260     # 给客人连接的端口, 一般前面固定为0.0.0.0
     encrypt: true        # 是否使用加密, 本地端表示加密, 服务端表示解密, 服务端只接收加密数据
 
   - name: DNX - 独角兽 - TCP
-    ip: 0.0.0.0:42261     # 给客人连接的端口, 一般前面固定为0.0.0.0
+    port: 42261     # 给客人连接的端口, 一般前面固定为0.0.0.0
     encrypt: true        # 是否使用加密, 本地端表示加密, 服务端表示解密, 服务端只接收加密数据
 
   - name: DNX - 鱼池 - TCP
-    ip: 0.0.0.0:42262     # 给客人连接的端口, 一般前面固定为0.0.0.0
+    port: 42262     # 给客人连接的端口, 一般前面固定为0.0.0.0
     encrypt: true        # 是否使用加密, 本地端表示加密, 服务端表示解密, 服务端只接收加密数据
 
   - name: DNX - neuropool - TCP
-    ip: 0.0.0.0:42264     # 给客人连接的端口, 一般前面固定为0.0.0.0
+    port: 42264     # 给客人连接的端口, 一般前面固定为0.0.0.0
     encrypt: true        # 是否使用加密, 本地端表示加密, 服务端表示解密, 服务端只接收加密数据
 
 
 
 #  ethw
   - name: ETHW 2m - TCP
-    ip: 0.0.0.0:42040     # 给客人连接的端口, 一般前面固定为0.0.0.0
+    port: 42040     # 给客人连接的端口, 一般前面固定为0.0.0.0
     encrypt: true        # 是否使用加密, 本地端表示加密, 服务端表示解密, 服务端只接收加密数据
 
   - name: ETHW 2m - ETH_GETWORK TCP
-    ip: 0.0.0.0:42050     # 给客人连接的端口, 一般前面固定为0.0.0.0
+    port: 42050     # 给客人连接的端口, 一般前面固定为0.0.0.0
     encrypt: true        # 是否使用加密, 本地端表示加密, 服务端表示解密, 服务端只接收加密数据
 
 
   - name: ETHW  鱼池 - TCP
-    ip: 0.0.0.0:42044     # 给客人连接的端口, 一般前面固定为0.0.0.0
+    port: 42044     # 给客人连接的端口, 一般前面固定为0.0.0.0
     encrypt: true        # 是否使用加密, 本地端表示加密, 服务端表示解密, 服务端只接收加密数据
 
   - name: ETHW  鱼池 - ETH_GETWORK TCP
-    ip: 0.0.0.0:42054     # 给客人连接的端口, 一般前面固定为0.0.0.0
+    port: 42054     # 给客人连接的端口, 一般前面固定为0.0.0.0
     encrypt: true        # 是否使用加密, 本地端表示加密, 服务端表示解密, 服务端只接收加密数据
 
 
 
   - name: ETHW - ZIL 双挖 ezil - TCP
-    ip: 0.0.0.0:42046     # 给客人连接的端口, 一般前面固定为0.0.0.0
+    port: 42046     # 给客人连接的端口, 一般前面固定为0.0.0.0
     encrypt: true        # 是否使用加密, 本地端表示加密, 服务端表示解密, 服务端只接收加密数据
 
   - name: ETHW - ZIL 双挖 ezil - ETH_GETWORK TCP
-    ip: 0.0.0.0:42056     # 给客人连接的端口, 一般前面固定为0.0.0.0
+    port: 42056     # 给客人连接的端口, 一般前面固定为0.0.0.0
     encrypt: true        # 是否使用加密, 本地端表示加密, 服务端表示解密, 服务端只接收加密数据
 
 
   - name: ETHW - ZIL 双挖 K1 - ETHZIL_GETWORK TCP
-    ip: 0.0.0.0:42047     # 给客人连接的端口, 一般前面固定为0.0.0.0
+    port: 42047     # 给客人连接的端口, 一般前面固定为0.0.0.0
     encrypt: true        # 是否使用加密, 本地端表示加密, 服务端表示解密, 服务端只接收加密数据
 
   - name: ETHW - ZIL 双挖 K1 -  TCP
-    ip: 0.0.0.0:42057     # 给客人连接的端口, 一般前面固定为0.0.0.0
+    port: 42057     # 给客人连接的端口, 一般前面固定为0.0.0.0
     encrypt: true        # 是否使用加密, 本地端表示加密, 服务端表示解密, 服务端只接收加密数据
 
 
@@ -132,117 +145,117 @@ servers:
 
 
   - name: etc 鱼池 TCP  GETWORK
-    ip: 0.0.0.0:42081
+    port: 42081
     encrypt: true        # 是否使用加密, 本地端表示加密, 服务端表示解密, 服务端只接收加密数据
 
   - name: etc 鱼池   TCP
-    ip: 0.0.0.0:42101
+    port: 42101
     encrypt: true        # 是否使用加密, 本地端表示加密, 服务端表示解密, 服务端只接收加密数据
 
 
   - name: etc 2miners  ZIL_GETWORK TCP
-    ip: 0.0.0.0:42083
+    port: 42083
     encrypt: true        # 是否使用加密, 本地端表示加密, 服务端表示解密, 服务端只接收加密数据
 
 
   - name: etc zil  ezil双挖 - ZIL_GETWORK TCP
-    ip: 0.0.0.0:42088    #
+    port: 42088    #
     encrypt: true        # 是否使用加密, 本地端表示加密, 服务端表示解密, 服务端只接收加密数据
 
   - name: etc zil  ezil双挖 - TCP
-    ip: 0.0.0.0:42108    #
+    port: 42108    #
     encrypt: true        # 是否使用加密, 本地端表示加密, 服务端表示解密, 服务端只接收加密数据
 
   - name: etc zil  鱼池双挖 - GETWORK TCP
-    ip: 0.0.0.0:42091    #
+    port: 42091    #
     encrypt: true        # 是否使用加密, 本地端表示加密, 服务端表示解密, 服务端只接收加密数据
 
   - name: etc zil  鱼池双挖 -   TCP
-    ip: 0.0.0.0:42111    #
+    port: 42111    #
     encrypt: true        # 是否使用加密, 本地端表示加密, 服务端表示解密, 服务端只接收加密数据
 
 
   - name: etc zil k1 双挖 - ZIL_GETWORK TCP
-    ip: 0.0.0.0:42092
+    port: 42092
     encrypt: true        # 是否使用加密, 本地端表示加密, 服务端表示解密, 服务端只接收加密数据
 
   - name: etc zil k1 双挖   - TCP
-    ip: 0.0.0.0:42112
+    port: 42112
     encrypt: true        # 是否使用加密, 本地端表示加密, 服务端表示解密, 服务端只接收加密数据
 
 
 # zil
   - name: ZIL 疯池 - ZIL_GETWORK TCP
-    ip: 0.0.0.0:42240
+    port: 42240
     encrypt: true        # 是否使用加密, 本地端表示加密, 服务端表示解密, 服务端只接收加密数据
 
   - name: ZIL 疯池 -   TCP
-    ip: 0.0.0.0:42250
+    port: 42250
     encrypt: true        # 是否使用加密, 本地端表示加密, 服务端表示解密, 服务端只接收加密数据
 
   - name: ZIL k1池 - ZIL_GETWORK TCP
-    ip: 0.0.0.0:42241
+    port: 42241
     encrypt: true        # 是否使用加密, 本地端表示加密, 服务端表示解密, 服务端只接收加密数据
 
   - name: ZIL k1池 -  TCP
-    ip: 0.0.0.0:42251
+    port: 42251
     encrypt: true        # 是否使用加密, 本地端表示加密, 服务端表示解密, 服务端只接收加密数据
 
 
 
 # rvn
   - name: rvn 2M TCP
-    ip: 0.0.0.0:42140
+    port: 42140
     encrypt: true        # 是否使用加密, 本地端表示加密, 服务端表示解密, 服务端只接收加密数据
 
   - name: rvn 鱼池 TCP
-    ip: 0.0.0.0:42142
+    port: 42142
     encrypt: true        # 是否使用加密, 本地端表示加密, 服务端表示解密, 服务端只接收加密数据
 
   - name: rvn 币安 TCP
-    ip: 0.0.0.0:42145
+    port: 42145
     encrypt: true        # 是否使用加密, 本地端表示加密, 服务端表示解密, 服务端只接收加密数据
 
 
 # alph
   - name: ALPH 英雄 - TCP
-    ip: 0.0.0.0:42420
+    port: 42420
     encrypt: true        # 是否使用加密, 本地端表示加密, 服务端表示解密, 服务端只接收加密数据
 
   - name: ALPH 毛池 - TCP
-    ip: 0.0.0.0:42421
+    port: 42421
     encrypt: true        # 是否使用加密, 本地端表示加密, 服务端表示解密, 服务端只接收加密数据
 
 
 
 # ergo
   - name: ERGO 鱼池 - TCP
-    ip: 0.0.0.0:42120
+    port: 42120
     encrypt: true        # 是否使用加密, 本地端表示加密, 服务端表示解密, 服务端只接收加密数据
 
   - name: ERGO 英雄 - TCP
-    ip: 0.0.0.0:42121
+    port: 42121
     encrypt: true        # 是否使用加密, 本地端表示加密, 服务端表示解密, 服务端只接收加密数据
 
   - name: ERGO  2miners - TCP
-    ip: 0.0.0.0:42123
+    port: 42123
     encrypt: true        # 是否使用加密, 本地端表示加密, 服务端表示解密, 服务端只接收加密数据
 
 
 
 # nexa
   - name: NEXA rplant - TCP
-    ip: 0.0.0.0:42360
+    port: 42360
     encrypt: true        # 是否使用加密, 本地端表示加密, 服务端表示解密, 服务端只接收加密数据
 
   - name: NEXA 毛池 - TCP
-    ip: 0.0.0.0:42361
+    port: 42361
     encrypt: true        # 是否使用加密, 本地端表示加密, 服务端表示解密, 服务端只接收加密数据
 
 
 # neox
   - name: NEOX 2miners - tcp
-    ip: 0.0.0.0:42441
+    port: 42441
     encrypt: true        # 是否使用加密, 本地端表示加密, 服务端表示解密, 服务端只接收加密数据
 
 
@@ -250,22 +263,22 @@ servers:
 
 # xmr
   - name: XMR nanopool - TCP
-    ip: 0.0.0.0:42160    # 2MINERS
+    port: 42160    # 2MINERS
     encrypt: true        # 是否使用加密, 本地端表示加密, 服务端表示解密, 服务端只接收加密数据
 
   - name: XMR 2m - TCP
-    ip: 0.0.0.0:42162    # 2MINERS
+    port: 42162    # 2MINERS
     encrypt: true        # 是否使用加密, 本地端表示加密, 服务端表示解密, 服务端只接收加密数据
 
 
 
 # flux
   - name: FLUX 英雄 - TCP
-    ip: 0.0.0.0:42460    #
+    port: 42460    #
     encrypt: true        # 是否使用加密, 本地端表示加密, 服务端表示解密, 服务端只接收加密数据
 
   - name: FLUX 2m - TCP
-    ip: 0.0.0.0:42461    #
+    port: 42461    #
     encrypt: true        # 是否使用加密, 本地端表示加密, 服务端表示解密, 服务端只接收加密数据
 
 
@@ -273,7 +286,7 @@ servers:
 
 # sero
   - name: SERO 抽水 - TCP
-    ip: 0.0.0.0:42400    #
+    port: 42400    #
     encrypt: true        # 是否使用加密, 本地端表示加密, 服务端表示解密, 服务端只接收加密数据
 
 
@@ -282,42 +295,42 @@ servers:
 # kas
 
   - name: KAS 毛池 - tcp
-    ip: 0.0.0.0:42181
+    port: 42181
     encrypt: true        # 是否使用加密, 本地端表示加密, 服务端表示解密, 服务端只接收加密数据
 
   - name: KAS 鱼池 - tcp
-    ip: 0.0.0.0:42182
+    port: 42182
     encrypt: true        # 是否使用加密, 本地端表示加密, 服务端表示解密, 服务端只接收加密数据
 
   - name: KAS kaspa-pool - tcp
-    ip: 0.0.0.0:42183
+    port: 42183
     encrypt: true        # 是否使用加密, 本地端表示加密, 服务端表示解密, 服务端只接收加密数据
 
   - name: KAS 英雄池 - tcp
-    ip: 0.0.0.0:42184
+    port: 42184
     encrypt: true        # 是否使用加密, 本地端表示加密, 服务端表示解密, 服务端只接收加密数据
 
   - name: KAS 鱼池 芯片 - tcp
-    ip: 0.0.0.0:42185
+    port: 42185
     encrypt: true        # 是否使用加密, 本地端表示加密, 服务端表示解密, 服务端只接收加密数据
 
 
 # clore
   - name: CLORE 抽水 - TCP
-    ip: 0.0.0.0:43000    #
+    port: 43000    #
     encrypt: true        # 是否使用加密, 本地端表示加密, 服务端表示解密, 服务端只接收加密数据
 
 
 
 # tcc
   - name: TCC 抽水 - TCP
-    ip: 0.0.0.0:43020    #
+    port: 43020    #
     encrypt: true        # 是否使用加密, 本地端表示加密, 服务端表示解密, 服务端只接收加密数据
 
 
 # dogewow
   - name: dogewow - tcp
-    ip: 0.0.0.0:43040    #
+    port: 43040    #
     encrypt: true        # 是否使用加密, 本地端表示加密, 服务端表示解密, 服务端只接收加密数据
 
 
@@ -328,45 +341,60 @@ servers:
 # 专业机
 # hns
   - name: 鱼池  HNS - TCP
-    ip: 0.0.0.0:40340    #
+    port: 40340    #
     encrypt: true        # 是否使用加密, 本地端表示加密, 服务端表示解密, 服务端只接收加密数据
 
 
 # ltc
   - name: LTC-鱼池-tcp    # tcp
-    ip: 0.0.0.0:40220     #
+    port: 40220     #
     encrypt: true        # 是否使用加密, 本地端表示加密, 服务端表示解密, 服务端只接收加密数据
 
 
-# btc
+# btc  f2
   - name: BTC-鱼池-tcp    # tcp
-    ip: 0.0.0.0:40200     #
+    port: 40200     #
+    encrypt: true        # 是否使用加密, 本地端表示加密, 服务端表示解密, 服务端只接收加密数据
+
+# btc  币安
+  - name: BTC-币安-tcp    # tcp
+    port: 40201     #
+    encrypt: true        # 是否使用加密, 本地端表示加密, 服务端表示解密, 服务端只接收加密数据
+
+# btc  蚂蚁
+  - name: BTC-蚂蚁-tcp    # tcp
+    port: 40202     #
+    encrypt: true        # 是否使用加密, 本地端表示加密, 服务端表示解密, 服务端只接收加密数据
+
+# btc  币印
+  - name: BTC-币印-tcp    # tcp
+    port: 40203     #
     encrypt: true        # 是否使用加密, 本地端表示加密, 服务端表示解密, 服务端只接收加密数据
 
 
 
 ## GRIN
   - name: GRIN 2m TCP              #
-    ip: 0.0.0.0:42500      #
+    port: 42500      #
     encrypt: true        # 是否使用加密, 本地端表示加密, 服务端表示解密, 服务端只接收加密数据
 
 
 ## NOVO
   - name: NOVO EKA TCP              #
-    ip: 0.0.0.0:43060      #
+    port: 43060      #
     encrypt: true        # 是否使用加密, 本地端表示加密, 服务端表示解密, 服务端只接收加密数据
 
 #
 #
 # TAFT
   - name: TAFT rplant TCP              #
-    ip: 0.0.0.0:43080      #
+    port: 43080      #
     encrypt: true        # 是否使用加密, 本地端表示加密, 服务端表示解密, 服务端只接收加密数据
 
 
 # PEPEW
   - name: PEPEW mining4people TCP              #
-    ip: 0.0.0.0:43100      #
+    port: 43100      #
     encrypt: true        # 是否使用加密, 本地端表示加密, 服务端表示解密, 服务端只接收加密数据
 
 
@@ -374,104 +402,153 @@ servers:
 
 # SKYDOGE
   - name: SKYDOGE 666pool TCP              #
-    ip: 0.0.0.0:43120      #
+    port: 43120      #
     encrypt: true        # 是否使用加密, 本地端表示加密, 服务端表示解密, 服务端只接收加密数据
 
 
 
 # zeph
   - name: zeph  miningocean TCP              #
-    ip: 0.0.0.0:43200      #
+    port: 43200      #
     encrypt: true        # 是否使用加密, 本地端表示加密, 服务端表示解密, 服务端只接收加密数据
 
 
 # zeph
   - name: zeph  英雄 TCP              #
-    ip: 0.0.0.0:43201      #
+    port: 43201      #
+    encrypt: true        # 是否使用加密, 本地端表示加密, 服务端表示解密, 服务端只接收加密数据
+
+
+  # zeph
+  - name: zeph 鱼池 TCP              #
+    port: 43202      #
     encrypt: true        # 是否使用加密, 本地端表示加密, 服务端表示解密, 服务端只接收加密数据
 
 
 
 
-
-# # OCTA
+  # # OCTA
   - name: OCTA coolpool TCP              #
-    ip: 0.0.0.0:42620      #
+    port: 42620      #
     encrypt: true        # 是否使用加密, 本地端表示加密, 服务端表示解密, 服务端只接收加密数据
 
 
 # # XPB
   - name: XPB K1 GPU TCP              #
-    ip: 0.0.0.0:43220      #
+    port: 43220      #
     encrypt: true        # 是否使用加密, 本地端表示加密, 服务端表示解密, 服务端只接收加密数据
 
 
 
 # # XPB
   - name: XPB K1 ASIC TCP              #
-    ip: 0.0.0.0:43221      #
+    port: 43221      #
     encrypt: true        # 是否使用加密, 本地端表示加密, 服务端表示解密, 服务端只接收加密数据
 
 
 # # XPB
   - name: XPB M4 TCP              #
-    ip: 0.0.0.0:43222      #
+    port: 43222      #
     encrypt: true        # 是否使用加密, 本地端表示加密, 服务端表示解密, 服务端只接收加密数据
 
 # # BEAM
   - name: BEAM 2M TCP              #
-    ip: 0.0.0.0:42380      #
+    port: 42380      #
     encrypt: true        # 是否使用加密, 本地端表示加密, 服务端表示解密, 服务端只接收加密数据
 
 
 # # obtc  rplant
   - name: OBTC RPLANT TCP              #
-    ip: 0.0.0.0:43240      #
+    port: 43240      #
     encrypt: true        # 是否使用加密, 本地端表示加密, 服务端表示解密, 服务端只接收加密数据
 
 
 # # btcp m4 tcp
   - name: btcp m4 tcp           #
-    ip: 0.0.0.0:43260      #
+    port: 43260      #
     encrypt: true        # 是否使用加密, 本地端表示加密, 服务端表示解密, 服务端只接收加密数据
 
 
 # # XNA 2miners  tcp
   - name: XNA 2miners  tcp       #
-    ip: 0.0.0.0:43280      #
+    port: 43280      #
     encrypt: true        # 是否使用加密, 本地端表示加密, 服务端表示解密, 服务端只接收加密数据
 
 
 #  MEWC 毛池  tcp
   - name: MEWC 毛池  tcp       #
-    ip: 0.0.0.0:42321      #
+    port: 42321      #
     encrypt: true        # 是否使用加密, 本地端表示加密, 服务端表示解密, 服务端只接收加密数据
 
 #  RTC rplant  tcp
   - name: RTC rplant  tcp      #
-    ip: 0.0.0.0:43300      #
+    port: 43300      #
     encrypt: true        # 是否使用加密, 本地端表示加密, 服务端表示解密, 服务端只接收加密数据
 
 #  KLS-英雄-tcp
   - name: KLS-英雄-tcp      #
-    ip: 0.0.0.0:43310      #
+    port: 43310      #
     encrypt: true        # 是否使用加密, 本地端表示加密, 服务端表示解密, 服务端只接收加密数据
 
 
 #  pyi-e4-tcp
   - name: pyi-e4-tcp
-    ip: 0.0.0.0:43320      #
+    port: 43320      #
     encrypt: true        # 是否使用加密, 本地端表示加密, 服务端表示解密, 服务端只接收加密数据
 
 
 # # fsc-rplant-ssl
   - name: fsc-rplant-ssl
-    ip: 0.0.0.0:43325      #
+    port: 43325      #
     encrypt: true        # 是否使用加密, 本地端表示加密, 服务端表示解密, 服务端只接收加密数据
 
 
 # # subi-rplant-tcp
   - name: subi-rplant-tcp
-    ip: 0.0.0.0:43330      #
+    port: 43330      #
     encrypt: true        # 是否使用加密, 本地端表示加密, 服务端表示解密, 服务端只接收加密数据
+
+# # aipg-rplant-tcp
+  - name: aipg-rplant-tcp
+    port: 43340      #
+    encrypt: true        # 是否使用加密, 本地端表示加密, 服务端表示解密, 服务端只接收加密数据
+
+# # diac diacbase-tcp
+  - name: diac-diacbase-tcp
+    port: 43370      #
+    encrypt: true        # 是否使用加密, 本地端表示加密, 服务端表示解密, 服务端只接收加密数据
+
+
+  - name: X11-nicehash-tcp
+    port: 43375      #
+    encrypt: true        # 是否使用加密, 本地端表示加密, 服务端表示解密, 服务端只接收加密数据
+
+
+
+# btg 2miners
+  - name: BTG 2miners tcp
+    port: 43380      #
+    encrypt: true        # 是否使用加密, 本地端表示加密, 服务端表示解密, 服务端只接收加密数据
+
+
+# TABO  rplant
+  - name: TABO rpalnt tcp
+    port: 43385      #
+    encrypt: true        # 是否使用加密, 本地端表示加密, 服务端表示解密, 服务端只接收加密数据
+
+  # WAF-
+  - name: WAF-RPALNT-tcp
+    port: 43420      #
+    encrypt: true
+
+
+  # URSA
+  - name: URSA-RPALNT-tcp
+    port: 43425      #
+    encrypt: true
+
+  # VISH
+  - name: VISH-RPALNT-tcp
+    port: 43430      #
+    encrypt: true
 

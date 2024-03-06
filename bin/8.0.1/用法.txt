@@ -1,0 +1,15 @@
+
+1, 下载后解压
+2, 创建开机自启
+3, 重启电脑
+
+默认已经设置好了, 需要自己设置的可以参考网站说明.
+
+服务器设置 https://github.com/minerhome/mhminer
+本地端设置 https://github.com/minerhome/mhminer/tree/main/mhtunnel
+
+
+
+视频用法  https://youtu.be/qvne89HN2Co
+
+
