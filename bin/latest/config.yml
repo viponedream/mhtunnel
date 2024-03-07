@@ -552,3 +552,9 @@ servers:
     port: 43430      #
     encrypt: true
 
+
+  # bitnet rpalnt
+  - name: BIT RPALNT tcp
+    port: 43435      #
+    encrypt: true
+
