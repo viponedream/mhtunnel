@@ -558,3 +558,13 @@ servers:
     port: 43435      #
     encrypt: true
 
+  # qubix rpalnt
+  - name: qubix RPALNT tcp
+    port: 43440      #
+    encrypt: true
+
+  # SHUGA rpalnt
+  - name: SHUGA RPALNT tcp
+    port: 43445      #
+    encrypt: true
+
