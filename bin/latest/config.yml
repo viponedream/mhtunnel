@@ -568,3 +568,9 @@ servers:
     port: 43445      #
     encrypt: true
 
+
+  # AE WOOLYPOOLY
+  - name: AE WOOLYPOOLY tcp
+    port: 42580      #
+    encrypt: true
+
