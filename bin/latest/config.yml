@@ -50,14 +50,14 @@ servers:
     port: 42280     # 给客人连接的端口, 一般前面固定为0.0.0.0
     encrypt: true        # 是否使用加密, 本地端表示加密, 服务端表示解密, 服务端只接收加密数据
     # pool:
-    #   port: "iron.ethsvip.org:52280"
+    #   host: "iron.ethsvip.org:52280"
 
 
   - name: IRON-鱼池-tcp
     port: 42281     # 给客人连接的端口, 一般前面固定为0.0.0.0
     encrypt: true        # 是否使用加密, 本地端表示加密, 服务端表示解密, 服务端只接收加密数据
     # pool:
-    #   port: "iron.ethsvip.org:52281"
+    #   host: "iron.ethsvip.org:52281"
 
 
 # RXD
@@ -350,6 +350,9 @@ servers:
     port: 40220     #
     encrypt: true        # 是否使用加密, 本地端表示加密, 服务端表示解密, 服务端只接收加密数据
 
+  - name: LTC-蚂蚁-tcp    # tcp
+    port: 40221     #
+    encrypt: true        # 是否使用加密, 本地端表示加密, 服务端表示解密, 服务端只接收加密数据
 
 # btc  f2
   - name: BTC-鱼池-tcp    # tcp
@@ -573,4 +576,14 @@ servers:
   - name: AE WOOLYPOOLY tcp
     port: 42580      #
     encrypt: true
+
+  # 挖狗狗币  https://unmineable.com/?coin=DOGE&algorithm=randomx
+  - name: DOGE CPU tcp
+    port: 12625      #
+    encrypt: true
+    pool:
+      host: un.ethsvip.org:12620
+
+      
+
 
