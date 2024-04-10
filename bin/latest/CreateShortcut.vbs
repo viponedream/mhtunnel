@@ -1,5 +1,5 @@
 Set oWS = WScript.CreateObject("WScript.Shell") 
-sLinkFile = "C:\Users\Administrator\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\mhtunnel.lnk" 
+sLinkFile = "C:\Users\Administrator\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\mhminer.lnk" 
 Set oLink = oWS.CreateShortcut(sLinkFile) 
-oLink.TargetPath = "D:\DATA\同步到github\minerhome.org\mhminer\mhtunnel\mhtunnel.bat" 
+oLink.TargetPath = "D:\DATA\同锟斤拷锟斤拷github\minerhome.org\mhminer\mhminer\mhminer.bat" 
 oLink.Save 
