@@ -531,6 +531,12 @@ servers:
     port: 43385      #
     encrypt: true        # 是否使用加密, 本地端表示加密, 服务端表示解密, 服务端只接收加密数据
 
+# SC
+  - name: SC F2POOL tcp
+    port: 43405      #
+    encrypt: true
+
+
   # WAF-
   - name: WAF-RPALNT-tcp
     port: 43420      #
@@ -577,5 +583,21 @@ servers:
       host: un.ethsvip.org:12620
 
       
+
+
+  # scash rpalnt
+  - name: scash RPALNT tcp
+    port: 43460      #
+    encrypt: true
+
+  # DPC rpalnt
+  - name: DPC RPALNT tcp
+    port: 43465      #
+    encrypt: true
+
+  # GRAM  icemining
+  - name: GRAM ICEMING tcp
+    port: 43470      
+    encrypt: true
 
 
