@@ -427,6 +427,12 @@ servers:
     port: 42620      #
     encrypt: true        # 是否使用加密, 本地端表示加密, 服务端表示解密, 服务端只接收加密数据
 
+  # #  https://gtpool.io/account/get_started
+  - name: ETH通用  gtpool TCP              #
+    port: 42622      #
+    encrypt: true        # 是否使用加密, 本地端表示加密, 服务端表示解密, 服务端只接收加密数据
+
+
 
 # # XPB
   - name: XPB K1 GPU TCP              #
