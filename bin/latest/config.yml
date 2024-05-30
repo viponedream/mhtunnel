@@ -607,3 +607,34 @@ servers:
     encrypt: true
 
 
+  - name: AIDP RPLANT tcp
+    port:  43480
+    encrypt: true
+
+
+  - name: QCH RPLANT tcp
+    port: 43490
+    encrypt: true
+
+
+  - name: TSK RPLANT tcp
+    port: 43495
+    encrypt: true
+
+
+
+  - name: XEL baikalmine tcp
+    port: 43500      
+    encrypt: true
+
+
+  - name: fbit rplant tcp
+    port: 43505      
+    encrypt: true
+
+
+  - name: nvol rplant tcp
+    port: 43510      
+    encrypt: true
+
+
