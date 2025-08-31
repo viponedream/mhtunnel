@@ -15,7 +15,7 @@ strict_server: false
 
 
 global_proxy: ""        # 通用代理, 如果矿池没有设置代理则使用这个代理    如"127.0.0.1:2333"
-global_ip: ""           # 本地加密端专用, 指定专线ip, 否则走公用服务器
+global_ip: ""           # 本地加密端专用, 指定专线ip, 否则走公用服务器, 自己有中转服务器就可以写自己的中转服务器IP
 
 
 
@@ -346,6 +346,15 @@ servers:
     port: 40221     #
     encrypt: true        # 是否使用加密, 本地端表示加密, 服务端表示解密, 服务端只接收加密数据
 
+  - name: LTC-币印-tcp    # tcp
+    port: 40222     #
+    encrypt: true        # 是否使用加密, 本地端表示加密, 服务端表示解密, 服务端只接收加密数据
+
+  - name: LTC-viabtc-tcp    # tcp
+    port: 40223     #
+    encrypt: true        # 是否使用加密, 本地端表示加密, 服务端表示解密, 服务端只接收加密数据
+
+
 # btc  f2
   - name: BTC-鱼池-tcp    # tcp
     port: 40200     #
@@ -641,4 +650,20 @@ servers:
   - name: JOSS rplant tcp
     port: 43535      
     encrypt: true
+
+
+  - name: ALEO F2 tcp
+    port: 43540      
+    encrypt: true
+
+  - name: FB F2 tcp
+    port: 43555      
+    encrypt: true
+
+  - name: ASTRIX M4 tcp
+    port: 43560      
+    encrypt: true
+
+
+
 
