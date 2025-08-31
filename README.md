@@ -1,10 +1,10 @@
 # mhtunnel  本地加密
-要跟 mhminer 配合使用, 本地加密之后发往mhminer服务器解密. 针对专业机, 如btc, ltc等专业机.
+要跟矿工之家矿池中转 mhminer 配合使用, 本地加密之后发往mhminer服务器解密. 针对专业机, 如btc, ltc等专业机.
 hiveos使用一键安装脚本, win则可以直接下载运行.
 
+可直接下载  https://github.com/viponedream/mhtunnel/releases/download/v8.1.8/8.1.8.zip
 
-
-win版本的直接下载  https://github.com/viponedream/mhtunnel/releases/download/v8.1.8/8.1.8.zip
+不会使用可以加QQ 248135618
 
 &nbsp; 一键安装脚本 (ubuntu18), 主要用于 hiveos, 如果是win系统可以直接下载
 ```
@@ -57,6 +57,9 @@ servers:
 ```
 
 
+
+矿工之家矿池中转  https://github.com/viponedream/mhminer
+抽水中转以及本地加密隧道可以搭配使用。
 
 
 
